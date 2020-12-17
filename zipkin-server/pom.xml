@@ -20,7 +20,7 @@
   <parent>
     <groupId>io.zipkin</groupId>
     <artifactId>zipkin-parent</artifactId>
-    <version>2.22.3-SNAPSHOT</version>
+    <version>2.23.2-SNAPSHOT</version>
   </parent>
 
   <artifactId>zipkin-server</artifactId>
@@ -32,7 +32,7 @@
     <main.signature.artifact>java18</main.signature.artifact>
 
     <!-- Sometimes we need to override Armeria's Brave version -->
-    <brave.version>5.13.0</brave.version>
+    <brave.version>5.13.2</brave.version>
     <proto.generatedSourceDirectory>${project.build.directory}/generated-test-sources/wire</proto.generatedSourceDirectory>
   </properties>
 
@@ -187,10 +187,10 @@
 
     <!-- Optional, but packaged in the supported distribution -->
 
-    <!-- Cassandra and Cassandra 3 backends -->
+    <!-- Cassandra backend -->
     <dependency>
       <groupId>${project.groupId}.zipkin2</groupId>
-      <artifactId>zipkin-storage-cassandra-v1</artifactId>
+      <artifactId>zipkin-storage-cassandra</artifactId>
       <version>${project.version}</version>
       <optional>true</optional>
     </dependency>
@@ -566,10 +566,6 @@
 <!--                </dependency>-->
 
                 <!-- storage and collectors which have 3rd party deps -->
-                <dependency>
-                  <groupId>${project.groupId}.zipkin2</groupId>
-                  <artifactId>zipkin-storage-cassandra-v1</artifactId>
-                </dependency>
                 <dependency>
                   <groupId>${project.groupId}.zipkin2</groupId>
                   <artifactId>zipkin-storage-cassandra</artifactId>

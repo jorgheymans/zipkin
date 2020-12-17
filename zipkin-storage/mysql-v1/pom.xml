@@ -20,7 +20,7 @@
   <parent>
     <groupId>io.zipkin.zipkin2</groupId>
     <artifactId>zipkin-storage-parent</artifactId>
-    <version>2.22.3-SNAPSHOT</version>
+    <version>2.23.2-SNAPSHOT</version>
   </parent>
 
   <artifactId>zipkin-storage-mysql-v1</artifactId>
@@ -29,7 +29,7 @@
   <properties>
     <main.basedir>${project.basedir}/../..</main.basedir>
 
-    <jooq.version>3.14.1</jooq.version>
+    <jooq.version>3.14.4</jooq.version>
 
     <!-- jOOQ doesn't add the Generated annotation, so we have to explicitly disable rules -->
     <errorprone.args>-Xep:InconsistentCapitalization:OFF</errorprone.args>
